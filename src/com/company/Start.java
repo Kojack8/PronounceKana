@@ -9,6 +9,7 @@ public class Start {
     File selectFile;
 
     public File run(){
+
         String path = Paths.get("PronounceKana.iml").toAbsolutePath().toString();
         File f = new File(path);
 
