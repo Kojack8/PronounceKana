@@ -9,6 +9,7 @@ public class Read {
 
     public void run(File file) throws FileNotFoundException {
         Scanner scan = new Scanner(file);
+        Write writer = new Write();
         while (scan.hasNext()) {
             Translate trans = new Translate();
             String s = scan.next();
@@ -19,17 +20,22 @@ public class Read {
                 if ((symbol == 'り' || symbol == 'み' || symbol == 'ひ' || symbol == 'に' || symbol == 'ち' ||
                 symbol == 'し' || symbol == 'き' || symbol == 'ぎ' || symbol == 'じ' || symbol == 'び' || symbol == 'キ'
                 || symbol == 'シ' || symbol == 'チ' || symbol == 'ニ' || symbol == 'ヒ' || symbol == 'ミ' || symbol == 'リ'
-                || symbol == 'ギ' || symbol == 'ジ' || symbol == 'ビ') && i < j){
-                    System.out.println("$$$$$$" + s.charAt(i));
+                || symbol == 'ギ' || symbol == 'ジ' || symbol == 'ビ') && (i + 1 < j) && (s.charAt(i+1) == 'ャ' ||
+                s.charAt(i+1) == 'ゃ' || s.charAt(i+1) == 'ュ' || s.charAt(i+1) == 'ゅ' || s.charAt(i+1) == 'ョ' ||
+                s.charAt(i+1) == 'ょ')){
+                    char cYoon = s.charAt(i + 1);
+                    String ans = trans.yoon(symbol, cYoon);
+                    writer.run(ans + " ");
+                    i++;
                 } else {
                     String translated = trans.change(symbol);
-                    System.out.print(translated + " ");
+                    writer.run(translated + " ");
                 }
                 i++;
 
 
             }
-            System.out.println();
+            writer.run("\n");
         }
         scan.close();
     }

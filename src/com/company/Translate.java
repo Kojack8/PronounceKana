@@ -2,6 +2,196 @@ package com.company;
 
 public class Translate {
 
+    public String yoon(char c, char d){
+        String ans = "";
+        if (d == 'ャ' || d == 'ゃ'){
+            switch(c){
+                case 'キ':
+                case 'き':
+                    ans = "kya";
+                break;
+
+                case 'シ':
+                case 'し':
+                    ans = "sha";
+                break;
+
+                case 'チ':
+                case 'ち':
+                    ans = "cha";
+                break;
+
+                case 'ニ':
+                case 'に':
+                    ans = "nya";
+                break;
+
+                case 'ヒ':
+                case 'ひ':
+                    ans = "hya";
+                break;
+
+                case 'ミ':
+                case 'み':
+                    ans = "mya";
+                break;
+
+                case 'リ':
+                case 'り':
+                    ans = "rya";
+                break;
+
+                case 'ギ':
+                case 'ぎ':
+                    ans = "gya";
+                break;
+
+                case 'ジ':
+                case 'じ':
+                    ans = "ja";
+                break;
+
+                case 'ビ':
+                case 'び':
+                    ans = "bya";
+                break;
+
+                case 'ピ':
+                case 'ぴ':
+                    ans = "pya";
+                break;
+
+                default:
+                    ans = this.change(c);
+                break;
+            }
+        } else if (d == 'ュ' || d == 'ゅ'){
+            switch(c) {
+                case 'キ':
+                case 'き':
+                    ans = "kyu";
+                    break;
+
+                case 'シ':
+                case 'し':
+                    ans = "shu";
+                    break;
+
+                case 'チ':
+                case 'ち':
+                    ans = "chu";
+                    break;
+
+                case 'ニ':
+                case 'に':
+                    ans = "nyu";
+                    break;
+
+                case 'ヒ':
+                case 'ひ':
+                    ans = "hyu";
+                    break;
+
+                case 'ミ':
+                case 'み':
+                    ans = "myu";
+                    break;
+
+                case 'リ':
+                case 'り':
+                    ans = "ryu";
+                    break;
+
+                case 'ギ':
+                case 'ぎ':
+                    ans = "gyu";
+                    break;
+
+                case 'ジ':
+                case 'じ':
+                    ans = "ju";
+                    break;
+
+                case 'ビ':
+                case 'び':
+                    ans = "byu";
+                    break;
+
+                case 'ピ':
+                case 'ぴ':
+                    ans = "pyu";
+                    break;
+
+                default:
+                    ans = this.change(c);
+                break;
+            }
+        } else if (d == 'ョ' || d == 'ょ') {
+            switch (c) {
+                case 'キ':
+                case 'き':
+                    ans = "kyo";
+                    break;
+
+                case 'シ':
+                case 'し':
+                    ans = "sho";
+                    break;
+
+                case 'チ':
+                case 'ち':
+                    ans = "cho";
+                    break;
+
+                case 'ニ':
+                case 'に':
+                    ans = "nyo";
+                    break;
+
+                case 'ヒ':
+                case 'ひ':
+                    ans = "hyo";
+                    break;
+
+                case 'ミ':
+                case 'み':
+                    ans = "myo";
+                    break;
+
+                case 'リ':
+                case 'り':
+                    ans = "ryo";
+                    break;
+
+                case 'ギ':
+                case 'ぎ':
+                    ans = "gyo";
+                    break;
+
+                case 'ジ':
+                case 'じ':
+                    ans = "jo";
+                    break;
+
+                case 'ビ':
+                case 'び':
+                    ans = "byo";
+                    break;
+
+                case 'ピ':
+                case 'ぴ':
+                    ans = "pyo";
+                    break;
+
+                default:
+                    ans = this.change(c);
+                    break;
+            }
+
+        }
+        return ans;
+    }
+
     public String change(char c){
         String ans;
         switch(c){
